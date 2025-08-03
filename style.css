@@ -1,72 +1,66 @@
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: radial-gradient(circle at center, #063, #020);
+  background: #093c0b;
   color: white;
   text-align: center;
-  overflow-x: hidden;
 }
 
 h1 {
   margin-top: 20px;
 }
 
-.table3d {
+.table {
   display: flex;
   justify-content: space-around;
   margin: 40px auto;
-  max-width: 1000px;
+  max-width: 800px;
+  border: 4px solid #fff;
+  border-radius: 20px;
+  padding: 20px;
   background: #004400;
-  padding: 30px;
-  border-radius: 60px 60px 20px 20px;
-  box-shadow: 0 0 60px #000 inset;
-  transform: perspective(900px) rotateX(15deg);
 }
 
-.zone {
-  text-align: center;
+.section h2 {
+  margin-bottom: 10px;
 }
 
 .cards {
   display: flex;
-  gap: 15px;
-  justify-content: center;
-  margin-top: 15px;
+  gap: 10px;
 }
 
 .card {
-  width: 90px;
-  height: 130px;
+  width: 80px;
+  height: 120px;
   background-color: white;
   border-radius: 8px;
+  color: black;
   font-size: 28px;
-  line-height: 130px;
+  line-height: 120px;
   text-align: center;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.7);
-  transform: rotateY(0deg);
-  animation: popCard 0.4s ease-out;
+  box-shadow: 0 0 8px #000;
+  transition: transform 0.4s;
 }
 
-@keyframes popCard {
-  0% { transform: scale(0) rotateY(90deg); opacity: 0; }
-  100% { transform: scale(1) rotateY(0); opacity: 1; }
+.card.animate {
+  transform: translateY(-20px);
 }
 
 .controls {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 button {
-  padding: 12px 24px;
-  font-size: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
   background-color: gold;
-  color: black;
   border: none;
-  border-radius: 12px;
+  border-radius: 10px;
   cursor: pointer;
-  box-shadow: 0 0 10px #000;
+  color: black;
 }
 
 #status {
-  margin-top: 20px;
-  font-size: 22px;
+  margin-top: 15px;
+  font-size: 20px;
 }
