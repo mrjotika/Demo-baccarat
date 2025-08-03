@@ -2,26 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Baccarat P2P Demo</title>
+  <title>Baccarat 2D Demo</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Baccarat Casino Demo 🎲</h1>
+  <h1>🎲 Baccarat P2P Demo</h1>
+
+  <div id="countdown">⏳ Thời gian còn lại: <span id="timer">60</span>s</div>
+
+  <div class="bet-options">
+    <button onclick="selectBet('player')">Player</button>
+    <button onclick="selectBet('banker')">Banker</button>
+    <button onclick="selectBet('tie')">Tie</button>
+  </div>
+
   <div class="table">
-    <div class="section player">
-      <h2>Player</h2>
+    <div class="zone player">
+      <h2>PLAYER</h2>
       <div class="cards" id="player-cards"></div>
     </div>
-    <div class="section banker">
-      <h2>Banker</h2>
+    <div class="zone banker">
+      <h2>BANKER</h2>
       <div class="cards" id="banker-cards"></div>
     </div>
   </div>
 
   <div class="controls">
-    <button onclick="playDemo()">▶️ Chơi Demo</button>
+    <button onclick="playDemo()">▶️ Chơi ngay</button>
     <div id="status"></div>
   </div>
+
+  <!-- Âm thanh -->
+  <audio id="deal-sound" src="sounds/deal.mp3" preload="auto"></audio>
+  <audio id="win-sound" src="sounds/win.mp3" preload="auto"></audio>
+  <audio id="lose-sound" src="sounds/lose.mp3" preload="auto"></audio>
 
   <script src="script.js"></script>
 </body>
